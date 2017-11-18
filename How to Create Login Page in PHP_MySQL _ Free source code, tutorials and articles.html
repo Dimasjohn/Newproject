@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html -->
+<html lang="en" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style media="screen"></style>
+<!--[if IE]><![endif]-->
+
+<script src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/reactive_library.js"></script><script async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/async-ads.js"></script><script src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/cb=gapi.loaded_1" async=""></script><script src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/trendcounter.js"></script><script type="text/javascript" async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/plusone.js" gapi_processed="true"></script><script src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/ca-pub-3664195971165750.js"></script><script id="twitter-wjs" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/widgets.js"></script><script type="text/javascript" async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/cse.js"></script><script id="facebook-jssdk" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/sdk.js"></script><script async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/analytics.js"></script><script type="text/javascript" async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/recaptcha__en.js"></script><script src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/api.js" async="async" defer="defer"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="https://www.sourcecodester.com/sites/all/themes/responsive_blog/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="Related code: How to Create Secure Login Page in PHP/MySQL.">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html">
+<link rel="shortlink" href="https://www.sourcecodester.com/node/4341">
+<meta property="og:site_name" content="Free source code, tutorials and articles">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html">
+<meta property="og:title" content="How to Create Login Page in PHP/MySQL">
+<meta property="og:description" content="Related code: How to Create Secure Login Page in PHP/MySQL.">
+<meta property="fb:admins" content="1411177716">
+<meta property="fb:app_id" content="157493590948193">
+<title>How to Create Login Page in PHP/MySQL | Free source code, tutorials and articles</title>
+<link type="text/css" rel="stylesheet" href="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/css__WelUFCm0OCibFy5oDGpZLTnQLU75pBAORNsQdztm89g__WVPZDdAgIP4VP9eOZVPwisUokCxhcLVPLt56aKw2lU8__dd3S9GTwy0OpssQ1-F6lsXCXAJlSzYV6yiUY9wVVTeE.css" media="all">
+<script type="text/javascript" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/js__lnAUN9MZTjLEOTdX4ZSFe1bej4_4QQxQt-uKrVOKkG8__FPJM4K5UGmoVpqZsvUdzk1CJIT0VB3D30elKBOJ48d0__dd3S9GTwy0OpssQ1-F6lsXCXAJlSzYV6yiUY9wVVTeE.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"responsive_blog","theme_token":"XIYRdUhjtNXGrJ7iwgzzdnZJyQksSJCZmA0jTdckBjc","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/poll\/poll.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/video_filter\/video_filter.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"public:\/\/geshi\/geshifilter-languages.css":1,"sites\/all\/modules\/geshifilter\/geshifilter.css":1,"modules\/filter\/filter.css":1,"sites\/all\/modules\/field_group\/field_group.field_ui.css":1,"sites\/all\/themes\/responsive_blog\/css\/dark.css":1,"sites\/all\/themes\/responsive_blog\/style.css":1,"sites\/all\/themes\/responsive_blog\/custom.css":1},"js":{"modules\/statistics\/statistics.js":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/form.js":1,"sites\/all\/modules\/captcha\/captcha.js":1,"misc\/textarea.js":1,"modules\/filter\/filter.js":1,"sites\/all\/themes\/responsive_blog\/js\/main-menu.js":1,"sites\/all\/themes\/responsive_blog\/js\/pngfix.min.js":1}},"urlIsAjaxTrusted":{"\/comment\/reply\/4341":true},"statistics":{"data":{"nid":"4341"},"url":"\/modules\/statistics\/statistics.php"}});
+//--><!]]>
+</script>
+<!--[if lt IE 9]><script src="/sites/all/themes/responsive_blog/js/html5.js"></script><![endif]-->
+<script async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3664195971165750",
+    enable_page_level_ads: true
+  });
+</script>
+<script type="text/javascript" async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/bsa.js"></script><link rel="preload" href="https://adservice.google.com.ng/adsid/integrator.js?domain=www.sourcecodester.com" as="script"><script type="text/javascript" src="https://adservice.google.com.ng/adsid/integrator.js?domain=www.sourcecodester.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.sourcecodester.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.sourcecodester.com"></script><script src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/jsapi" type="text/javascript"></script><script type="text/javascript" id="_bsap_js_363b20df2cca725c3e2707a18e83b07f" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/s_363b20df2cca725c3e2707a18e83b07f.js" async="async"></script><link type="text/css" href="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/default+en.css" rel="stylesheet"><link type="text/css" href="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/default.css" rel="stylesheet"><script type="text/javascript" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/default+en.I.js"></script><script type="text/javascript" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/pro.js" id="_bsap_premium_pro"></script><script type="text/javascript" charset="utf-8" async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/button.ff75f6bb802cdab010d3711201caf594.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://z-m-static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{height:100%;overflow:hidden;position:fixed;width:100%}.fb_shrink_active{opacity:1;transform:scale(1, 1);transition-duration:200ms;transition-timing-function:ease-out}.fb_shrink_active:active{opacity:.5;transform:scale(.75, .75)}</style><script type="text/javascript" id="_bsaPRO_js" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/saved_resource" async="async"></script><style type="text/css">
+</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 7px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-4341 node-type-tutorials white">
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-23564392-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/lY4eZXm_YWu.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '157493590948193',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+<script type="text/javascript">
+  (function(){
+    var bsa = document.createElement('script');
+       bsa.type = 'text/javascript';
+       bsa.async = true;
+       bsa.src = '//s3.buysellads.com/ac/bsa.js';
+    (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+  })();
+  </script>
+
+<div id="wrapper">
+<header id="header" class="clearfix">
+<div id="site-logo"><a href="https://www.sourcecodester.com/" title="Home">
+<img src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/logo.png" alt="Home">
+</a>
+<style>
+		@media (min-width: 320px) { #bsap_1260235 img { display: block; max-width: 300px; width: auto; height: auto; } }
+		@media (min-width: 360px) { #bsap_1260235 img { display: block; max-width: 300px; width: auto; height: auto; } }
+		@media (min-width: 600px) { #bsap_1260235 img { display: block; max-width: 460px; width: auto; height: auto; } }
+		@media (min-width: 640px) { #bsap_1260235 img { display: block; max-width: 460px; width: auto; height: auto; } }
+		@media (min-width: 1024px) { #site-logo {
+			position: relative;
+			height: auto;
+			max-width: auto;
+			top: 20px;
+			& > } #bsap_1260235 img { display: block; max-width: 468px; width: auto; height: auto; } }
+		@media (min-width: 1280px) { #bsa {
+			position: relative;
+			float: right;
+			height: auto;
+			max-width: 100%;
+			top: 8px;
+			& > } #bsap_1260235 img { display: block; max-width: 468px; width: auto; height: auto; } }
+	  </style>
+<div id="bsa">
+
+<div id="bsap_1260235" class="bsap bsap_1260235" data-serve="CVAILKE">
+<style type="text/css">
+div.bsap_1260235{width:100%;display:block;}div.bsap_1260235 a{width:468px;}div.bsap_1260235 a img{padding:0;}div.bsap_1260235 a em{font-style:normal;}div.bsap_1260235 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;}
+div.bsap_1260235 img{border:0;clear:right;}
+div.bsap_1260235 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}
+div.bsap_1260235 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1260235 a{line-height:100%;}div.bsap_1260235 a.adhere{width:468px;height:60px;line-height:480%;}html>body div.bsap_1260235 a.adhere{width:466px;height:58px;}div.bsap_1260235 img.s{height:0;width:0;}
+</style>
+<!-- no ad -->
+
+<a href="http://www.buysellads.com/buy/detail/4673/zone/1260235?utm_source=site_4673&amp;utm_medium=website&amp;utm_campaign=imagetext&amp;utm_content=zone_1260235" class="adhere">Advertise Here</a>
+
+
+<script type="text/javascript" id="auto_1" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+
+</div>
+</div> <nav id="navigation" role="navigation">
+<div id="main-menu">
+<ul class="menu l_tinynavNaN"><li class="first leaf"><a href="https://www.sourcecodester.com/" title="">Home</a></li>
+<li class="expanded"><a href="https://www.sourcecodester.com/programming" title="">Programming</a><ul class="menu"><li class="first leaf"><a href="https://www.sourcecodester.com/visual-basic" title="">Visual Basic</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/visual-basic-net" title="">Visual Basic .NET</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/asp" title="">ASP/ASP.NET</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/c-sharp" title="">C#</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/cpp" title="">C/C++</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/delphi">Delphi</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/java" title="">Java</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/javascript">JavaScript</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/microsoft-access" title="">Microsoft Access</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/php" title="">PHP</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/sql">SQL</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/foxpro">Visual FoxPro</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/html">HTML/CSS</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/python">Python</a></li>
+<li class="last leaf"><a href="https://www.sourcecodester.com/other">Other</a></li>
+</ul></li>
+<li class="expanded"><a href="https://www.sourcecodester.com/mobile" title="">Mobile</a><ul class="menu"><li class="first leaf"><a href="https://www.sourcecodester.com/android">Android</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/ios">iOS</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/windows-phone">Windows Phone</a></li>
+<li class="last leaf"><a href="https://www.sourcecodester.com/firefox-os">Firefox OS</a></li>
+</ul></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/blog" title="">Blog</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/review">Reviews</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/tutorial" title="">Tutorials</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/contact" title="">Contact</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/user?destination=submit-code" title="">Submit Code</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/user" title="">Log In</a></li>
+<li class="last leaf"><a href="https://www.sourcecodester.com/user/register" title="">Register</a></li>
+</ul><select class="tinynav tinynavNaN"><option value="/">Home</option><option value="/programming">Programming</option><option value="/visual-basic">&nbsp;&nbsp;Visual Basic</option><option value="/visual-basic-net">&nbsp;&nbsp;Visual Basic .NET</option><option value="/asp">&nbsp;&nbsp;ASP/ASP.NET</option><option value="/c-sharp">&nbsp;&nbsp;C#</option><option value="/cpp">&nbsp;&nbsp;C/C++</option><option value="/delphi">&nbsp;&nbsp;Delphi</option><option value="/java">&nbsp;&nbsp;Java</option><option value="/javascript">&nbsp;&nbsp;JavaScript</option><option value="/microsoft-access">&nbsp;&nbsp;Microsoft Access</option><option value="/php">&nbsp;&nbsp;PHP</option><option value="/sql">&nbsp;&nbsp;SQL</option><option value="/foxpro">&nbsp;&nbsp;Visual FoxPro</option><option value="/html">&nbsp;&nbsp;HTML/CSS</option><option value="/python">&nbsp;&nbsp;Python</option><option value="/other">&nbsp;&nbsp;Other</option><option value="/mobile">Mobile</option><option value="/android">&nbsp;&nbsp;Android</option><option value="/ios">&nbsp;&nbsp;iOS</option><option value="/windows-phone">&nbsp;&nbsp;Windows Phone</option><option value="/firefox-os">&nbsp;&nbsp;Firefox OS</option><option value="/blog">Blog</option><option value="/review">Reviews</option><option value="/tutorial">Tutorials</option><option value="/contact">Contact</option><option value="/user?destination=submit-code">Submit Code</option><option value="/user">Log In</option><option value="/user/register">Register</option></select> </div>
+</nav>
+</header>
+<div id="preface-area" class="clearfix">
+</div>
+<div id="main" class="clearfix">
+<div id="primary">
+<section id="content" role="main">
+<div id="content_top"><div class="region region-content-top">
+<div id="block-block-46" class="block block-block">
+<div class="content">
+<link rel="stylesheet" href="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/cse.css" type="text/css">
+<script>
+  (function() {
+    var cx = '011926241189572939544:tv2qoa9kqv8';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div id="___gcse_0" dir="ltr"><form class="gsc-search-box" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><input autocomplete="off" type="text" size="10" class=" gsc-input" name="search" title="search" id="gsc-i-id1" dir="ltr" spellcheck="false" placeholder="Custom Search" style="outline: none; background: url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px;"><input type="hidden" name="bgresponse" id="bgresponse"></td><td class="gsc-search-button"><input type="button" value="Search" class="gsc-search-button" title="search"></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gsc-branding"><tbody><tr><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/googlelogo_grey_46x15dp.png" class="gsc-branding-img" srcset="https://www.google.com/cse/static/images/2x/googlelogo_grey_46x15dp.png 2x"></td></tr></tbody></table></form></div>
+<div id="___gcse_1"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><div class="gsc-results-wrapper-nooverlay"><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div><div class="gsc-tabsAreaInvisible"></div><div class="gsc-above-wrapper-area-invisible"><table cellspacing="0" cellpadding="0" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table cellspacing="0" cellpadding="0" class="gsc-resultsHeader"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div class="gsc-result-selector gsc-one-result" title="show one result">&nbsp;</div><div class="gsc-result-selector gsc-more-results" title="show more results">&nbsp;</div><div class="gsc-result-selector gsc-all-results" title="show all results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div></div></div> </div>
+</div> 
+</div>
+
+</div> <div id="content-wrap">
+<h1 class="page-title">How to Create Login Page in PHP/MySQL</h1> <div class="region region-content">
+<div id="block-system-main" class="block block-system">
+<div class="content">
+<div class="ds-1col node node-tutorials node-promoted node-full view-mode-full clearfix ">
+<div class="field field-name-author field-type-ds field-label-inline clearfix field-author"><div class="field-label">Submitted by:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="https://www.sourcecodester.com/users/argie" title="View user profile." class="username">argie</a></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">Friday, May 25, 2012 - 10:49</div></div></div><div class="field field-name-field-language field-type-taxonomy-term-reference field-label-inline clearfix"><div class="field-label">Language:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="https://www.sourcecodester.com/category/language/php">PHP</a></div></div></div><div class="field field-name-total-views field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">Visitors have accessed this post <em><strong>1262673</strong></em> times.</div></div></div><div class="field field-name-social-media-button-top field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class="post-ad-left">
+<div class="sm-buttons-box">
+<div class="sm_button">
+<iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/tweet_button.21783de9dc99fcf78a11eef96926d932.en.html" style="position: static; visibility: visible; width: 60px; height: 20px;" data-url="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+<div class="sm_button">
+
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 32px; height: 20px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 32px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1510785094881" name="I0_1510785094881" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/fastbutton.html" data-gapiattached="true" title="G+"></iframe></div>
+</div>
+<div class="sm_button">
+<div class="fb-share-button fb_iframe_widget" data-href="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html" data-type="button" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=157493590948193&amp;container_width=0&amp;href=https%3A%2F%2Fwww.sourcecodester.com%2Ftutorials%2Fphp%2F4341%2Fhow-create-login-page-phpmysql.html&amp;locale=en_US&amp;sdk=joey&amp;type=button"><span style="vertical-align: bottom; width: 59px; height: 20px;"><iframe name="f37ce3aa66be604" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:share_button Facebook Social Plugin" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/share_button.html" style="border: none; visibility: visible; width: 59px; height: 20px;" class=""></iframe></span></div>
+</div>
+<div class="sm_button">
+<div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/SourceCodester" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=157493590948193&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2FSourceCodester&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 80px; height: 20px;"><iframe name="f1cd44ce39c02b8" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/like.html" style="border: none; visibility: visible; width: 80px; height: 20px;" class=""></iframe></span></div>
+</div>
+</div>
+</div>
+<div style="clear:both"></div></div></div></div><div class="field field-name-topcontentads field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div style="padding:0 !important; border:none !important; clear:both" ;="">
+<script async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle scads" style="display: inline-block; width: 600px; height: 280px;" data-ad-client="ca-pub-3664195971165750" data-ad-slot="3266081048" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:600px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:600px;background-color:transparent;"><iframe width="600" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:600px;height:280px;" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/saved_resource.html"></iframe></ins></ins></ins>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>Related code: <a href="https://www.sourcecodester.com/tutorials/php/9460/how-create-secure-login-page-phpmysql-part-i.html">How to Create Secure Login Page in PHP/MySQL</a>.</p>
+<p>Yesterday I posted a tutorial on <a href="https://www.sourcecodester.com/tutorials/php/4340/how-create-registration-page-phpmysql.html">how to create a registration page using PHP/MySQL</a>. To make some follow up with my registration page tutorial, I decided to create another tutorial on how to create a login page using PHP/MySQL. The Features of my login page contain input validation using PHP session. One unique feature also with my login page is the logout function, it is unique because unlike with other login page once the user click the logout button and click the back button of the browser, their system allows the user to go back as if it still logged in, which is not appropriate for security reason. But here in my login page once the user click the logout button, the user can no longer go back to their previous page. The only way to go back to the previous page is to login again. </p>
+<p>To start this tutorial let’s follow some steps below.</p>
+<h2>Creating Our Database</h2>
+<p>First we are going to create our database which stores our data.<br>
+To create a database:<br>
+1. Open phpmyadmin<br>
+2. Click create table and name it.<br>
+3. Then name the database as "simple_login".<br>
+4. After creating a database name, click the SQL and paste the following code.</p>
+<div class="geshifilter">
+<pre class="php geshifilter-php"><ol><li class="li1"><div class="de1">CREATE TABLE <span class="kw1">IF</span> NOT EXISTS `member` <span class="br0">(</span></div></li><li class="li1"><div class="de1">  `mem_id` int<span class="br0">(</span><span class="nu0">11</span><span class="br0">)</span> NOT <span class="kw4">NULL</span> AUTO_INCREMENT<span class="sy0">,</span></div></li><li class="li1"><div class="de1">  `username` varchar<span class="br0">(</span><span class="nu0">30</span><span class="br0">)</span> NOT <span class="kw4">NULL</span><span class="sy0">,</span></div></li><li class="li1"><div class="de1">  `password` varchar<span class="br0">(</span><span class="nu0">30</span><span class="br0">)</span> NOT <span class="kw4">NULL</span><span class="sy0">,</span></div></li><li class="li1"><div class="de1">  `fname` varchar<span class="br0">(</span><span class="nu0">30</span><span class="br0">)</span> NOT <span class="kw4">NULL</span><span class="sy0">,</span></div></li><li class="li1"><div class="de1">  `lname` varchar<span class="br0">(</span><span class="nu0">30</span><span class="br0">)</span> NOT <span class="kw4">NULL</span><span class="sy0">,</span></div></li><li class="li1"><div class="de1">  `address` varchar<span class="br0">(</span><span class="nu0">100</span><span class="br0">)</span> NOT <span class="kw4">NULL</span><span class="sy0">,</span></div></li><li class="li1"><div class="de1">  `contact` varchar<span class="br0">(</span><span class="nu0">30</span><span class="br0">)</span> NOT <span class="kw4">NULL</span><span class="sy0">,</span></div></li><li class="li1"><div class="de1">  `picture` varchar<span class="br0">(</span><span class="nu0">100</span><span class="br0">)</span> NOT <span class="kw4">NULL</span><span class="sy0">,</span></div></li><li class="li1"><div class="de1">  `gender` varchar<span class="br0">(</span><span class="nu0">10</span><span class="br0">)</span> NOT <span class="kw4">NULL</span><span class="sy0">,</span></div></li><li class="li1"><div class="de1">  PRIMARY <a href="http://www.php.net/key"><span class="kw3">KEY</span></a> <span class="br0">(</span>`mem_id`<span class="br0">)</span></div></li><li class="li1"><div class="de1"><span class="br0">)</span> ENGINE<span class="sy0">=</span>MyISAM  <span class="kw1">DEFAULT</span> CHARSET<span class="sy0">=</span>latin1 AUTO_INCREMENT<span class="sy0">=</span><span class="nu0">3</span> <span class="sy0">;</span></div></li></ol></pre></div>
+<h2>Creating Our Form</h2>
+<p>Next step is to create a form and save it as index.php. To create a form, open your HTML code editor and paste the code below in the upper part of the document or above the html tag. The code below is use to disallow the user to go back as if it still logged in.</p>
+<div class="geshifilter">
+<pre class="php geshifilter-php"><ol><li class="li1"><div class="de1"><span class="kw2">&lt;?php</span></div></li><li class="li1"><div class="de1">	<span class="co1">//Start session</span></div></li><li class="li1"><div class="de1">	<a href="http://www.php.net/session_start"><span class="kw3">session_start</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>	</div></li><li class="li1"><div class="de1">	<span class="co1">//Unset the variables stored in session</span></div></li><li class="li1"><div class="de1">	<a href="http://www.php.net/unset"><span class="kw3">unset</span></a><span class="br0">(</span><span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'SESS_MEMBER_ID'</span><span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">	<a href="http://www.php.net/unset"><span class="kw3">unset</span></a><span class="br0">(</span><span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'SESS_FIRST_NAME'</span><span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">	<a href="http://www.php.net/unset"><span class="kw3">unset</span></a><span class="br0">(</span><span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'SESS_LAST_NAME'</span><span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1"><span class="sy1">?&gt;</span></div></li></ol></pre></div>
+<p>Paste the code bellow after the body tag of the HTML document</p>
+<div class="geshifilter">
+<pre class="php geshifilter-php"><ol><li class="li1"><div class="de1">&lt;form name="loginform" action="login_exec.php" method="post"&gt;</div></li><li class="li1"><div class="de1">&lt;table width="309" border="0" align="center" cellpadding="2" cellspacing="5"&gt;</div></li><li class="li1"><div class="de1">  &lt;tr&gt;</div></li><li class="li1"><div class="de1">    &lt;td colspan="2"&gt;</div></li><li class="li1"><div class="de1">		&lt;!--the code bellow is used to display the message of the input validation--&gt;</div></li><li class="li1"><div class="de1">		 <span class="kw2">&lt;?php</span></div></li><li class="li1"><div class="de1">			<span class="kw1">if</span><span class="br0">(</span> <a href="http://www.php.net/isset"><span class="kw3">isset</span></a><span class="br0">(</span><span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'ERRMSG_ARR'</span><span class="br0">]</span><span class="br0">)</span> <span class="sy0">&amp;&amp;</span> <a href="http://www.php.net/is_array"><span class="kw3">is_array</span></a><span class="br0">(</span><span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'ERRMSG_ARR'</span><span class="br0">]</span><span class="br0">)</span> <span class="sy0">&amp;&amp;</span> <a href="http://www.php.net/count"><span class="kw3">count</span></a><span class="br0">(</span><span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'ERRMSG_ARR'</span><span class="br0">]</span><span class="br0">)</span> <span class="sy0">&gt;</span><span class="nu0">0</span> <span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">			<span class="kw1">echo</span> <span class="st_h">'&lt;ul class="err"&gt;'</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<span class="kw1">foreach</span><span class="br0">(</span><span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'ERRMSG_ARR'</span><span class="br0">]</span> <span class="kw1">as</span> <span class="re0">$msg</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">				<span class="kw1">echo</span> <span class="st_h">'&lt;li&gt;'</span><span class="sy0">,</span><span class="re0">$msg</span><span class="sy0">,</span><span class="st_h">'&lt;/li&gt;'</span><span class="sy0">;</span> </div></li><li class="li1"><div class="de1">				<span class="br0">}</span></div></li><li class="li1"><div class="de1">			<span class="kw1">echo</span> <span class="st_h">'&lt;/ul&gt;'</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<a href="http://www.php.net/unset"><span class="kw3">unset</span></a><span class="br0">(</span><span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'ERRMSG_ARR'</span><span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<span class="br0">}</span></div></li><li class="li1"><div class="de1">		<span class="sy1">?&gt;</span></div></li><li class="li1"><div class="de1">	&lt;/td&gt;</div></li><li class="li1"><div class="de1">  &lt;/tr&gt;</div></li><li class="li1"><div class="de1">  &lt;tr&gt;</div></li><li class="li1"><div class="de1">    &lt;td width="116"&gt;&lt;div align="right"&gt;Username&lt;/div&gt;&lt;/td&gt;</div></li><li class="li1"><div class="de1">    &lt;td width="177"&gt;&lt;input name="username" type="text" /&gt;&lt;/td&gt;</div></li><li class="li1"><div class="de1">  &lt;/tr&gt;</div></li><li class="li1"><div class="de1">  &lt;tr&gt;</div></li><li class="li1"><div class="de1">    &lt;td&gt;&lt;div align="right"&gt;Password&lt;/div&gt;&lt;/td&gt;</div></li><li class="li1"><div class="de1">    &lt;td&gt;&lt;input name="password" type="text" /&gt;&lt;/td&gt;</div></li><li class="li1"><div class="de1">  &lt;/tr&gt;</div></li><li class="li1"><div class="de1">  &lt;tr&gt;</div></li><li class="li1"><div class="de1">    &lt;td&gt;&lt;div align="right"&gt;&lt;/div&gt;&lt;/td&gt;</div></li><li class="li1"><div class="de1">    &lt;td&gt;&lt;input name="" type="submit" value="login" /&gt;&lt;/td&gt;</div></li><li class="li1"><div class="de1">  &lt;/tr&gt;</div></li><li class="li1"><div class="de1">&lt;/table&gt;</div></li><li class="li1"><div class="de1">&lt;/form&gt;</div></li></ol></pre></div>
+<h2>Creating our Connection</h2>
+<p></p><div id="block-inject-1" class="block-inject block-inject-1"></div><div class="clearfix"></div><p>Next step is to create a database connection and save it as "connection.php". This file is used to connect our form to database. </p>
+<div class="geshifilter">
+<pre class="php geshifilter-php"><ol><li class="li1"><div class="de1"><span class="kw2">&lt;?php</span></div></li><li class="li1"><div class="de1"><span class="re0">$mysql_hostname</span> <span class="sy0">=</span> <span class="st0">"localhost"</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1"><span class="re0">$mysql_user</span> <span class="sy0">=</span> <span class="st0">"root"</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1"><span class="re0">$mysql_password</span> <span class="sy0">=</span> <span class="st0">""</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1"><span class="re0">$mysql_database</span> <span class="sy0">=</span> <span class="st0">"simple_login"</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1"><span class="re0">$prefix</span> <span class="sy0">=</span> <span class="st0">""</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1"><span class="re0">$bd</span> <span class="sy0">=</span> <a href="http://www.php.net/mysqli_connect"><span class="kw3">mysqli_connect</span></a><span class="br0">(</span><span class="re0">$mysql_hostname</span><span class="sy0">,</span> <span class="re0">$mysql_user</span><span class="sy0">,</span> <span class="re0">$mysql_password</span><span class="br0">)</span> or <a href="http://www.php.net/die"><span class="kw3">die</span></a><span class="br0">(</span><span class="st0">"Could not connect database"</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1"><a href="http://www.php.net/mysqli_select_db"><span class="kw3">mysqli_select_db</span></a><span class="br0">(</span><span class="re0">$bd</span><span class="sy0">,</span> <span class="re0">$mysql_database</span><span class="br0">)</span> or <a href="http://www.php.net/die"><span class="kw3">die</span></a><span class="br0">(</span><span class="st0">"Could not select database"</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1"><span class="sy1">?&gt;</span></div></li></ol></pre></div>
+<h2>Writing Our Login Script</h2>
+<p>Next step is to create our login script that validates our input data and save it as login_exec.php.</p>
+<div class="geshifilter">
+<pre class="php geshifilter-php"><ol><li class="li1"><div class="de1"><span class="kw2">&lt;?php</span></div></li><li class="li1"><div class="de1">	<span class="co1">//Start session</span></div></li><li class="li1"><div class="de1">	<a href="http://www.php.net/session_start"><span class="kw3">session_start</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">	<span class="co1">//Include database connection details</span></div></li><li class="li1"><div class="de1">	<span class="kw1">require_once</span><span class="br0">(</span><span class="st_h">'connection.php'</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">	<span class="co1">//Array to store validation errors</span></div></li><li class="li1"><div class="de1">	<span class="re0">$errmsg_arr</span> <span class="sy0">=</span> <a href="http://www.php.net/array"><span class="kw3">array</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">	<span class="co1">//Validation error flag</span></div></li><li class="li1"><div class="de1">	<span class="re0">$errflag</span> <span class="sy0">=</span> <span class="kw4">false</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">	<span class="co1">//Function to sanitize values received from the form. Prevents SQL injection</span></div></li><li class="li1"><div class="de1">	<span class="kw2">function</span> clean<span class="br0">(</span><span class="re0">$str</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">		<span class="kw1">echo</span> <span class="st0">"str: "</span><span class="sy0">.</span><span class="re0">$str</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">		<span class="re0">$str</span> <span class="sy0">=</span> <span class="sy0">@</span><a href="http://www.php.net/trim"><span class="kw3">trim</span></a><span class="br0">(</span><span class="re0">$str</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">		<span class="kw1">if</span><span class="br0">(</span><a href="http://www.php.net/get_magic_quotes_gpc"><span class="kw3">get_magic_quotes_gpc</span></a><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">			<span class="re0">$str</span> <span class="sy0">=</span> <a href="http://www.php.net/stripslashes"><span class="kw3">stripslashes</span></a><span class="br0">(</span><span class="re0">$str</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">		<span class="br0">}</span></div></li><li class="li1"><div class="de1">		<span class="kw1">return</span> <a href="http://www.php.net/mysqli_real_escape_string"><span class="kw3">mysqli_real_escape_string</span></a><span class="br0">(</span><span class="re0">$str</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">	<span class="br0">}</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">	<span class="co1">//Sanitize the POST values</span></div></li><li class="li1"><div class="de1">	<span class="re0">$username</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">[</span><span class="st_h">'username'</span><span class="br0">]</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">	<span class="re0">$password</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">[</span><span class="st_h">'password'</span><span class="br0">]</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">	<span class="co1">//Input Validations</span></div></li><li class="li1"><div class="de1">	<span class="kw1">if</span><span class="br0">(</span><span class="re0">$username</span> <span class="sy0">==</span> <span class="st_h">''</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">		<span class="re0">$errmsg_arr</span><span class="br0">[</span><span class="br0">]</span> <span class="sy0">=</span> <span class="st_h">'Username missing'</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">		<span class="re0">$errflag</span> <span class="sy0">=</span> <span class="kw4">true</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">	<span class="br0">}</span></div></li><li class="li1"><div class="de1">	<span class="kw1">if</span><span class="br0">(</span><span class="re0">$password</span> <span class="sy0">==</span> <span class="st_h">''</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">		<span class="re0">$errmsg_arr</span><span class="br0">[</span><span class="br0">]</span> <span class="sy0">=</span> <span class="st_h">'Password missing'</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">		<span class="re0">$errflag</span> <span class="sy0">=</span> <span class="kw4">true</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">	<span class="br0">}</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">	<span class="co1">//If there are input validations, redirect back to the login form</span></div></li><li class="li1"><div class="de1">	<span class="kw1">if</span><span class="br0">(</span><span class="re0">$errflag</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">		<span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'ERRMSG_ARR'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="re0">$errmsg_arr</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">		<a href="http://www.php.net/session_write_close"><span class="kw3">session_write_close</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">		<a href="http://www.php.net/header"><span class="kw3">header</span></a><span class="br0">(</span><span class="st0">"location: index.php"</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">		<a href="http://www.php.net/exit"><span class="kw3">exit</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">	<span class="br0">}</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">	<span class="co1">//Create query</span></div></li><li class="li1"><div class="de1">	<span class="re0">$qry</span><span class="sy0">=</span><span class="st0">"SELECT * FROM member WHERE username='<span class="es4">$username</span>' AND password='<span class="es4">$password</span>'"</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">	<span class="re0">$result</span><span class="sy0">=</span><a href="http://www.php.net/mysqli_query"><span class="kw3">mysqli_query</span></a><span class="br0">(</span><span class="re0">$bd</span><span class="sy0">,</span> <span class="re0">$qry</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">	<span class="co1">//Check whether the query was successful or not</span></div></li><li class="li1"><div class="de1">	<span class="kw1">if</span><span class="br0">(</span><span class="re0">$result</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">		<span class="kw1">if</span><span class="br0">(</span><a href="http://www.php.net/mysqli_num_rows"><span class="kw3">mysqli_num_rows</span></a><span class="br0">(</span><span class="re0">$result</span><span class="br0">)</span> <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">			<span class="co1">//Login Successful</span></div></li><li class="li1"><div class="de1">			<a href="http://www.php.net/session_regenerate_id"><span class="kw3">session_regenerate_id</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<span class="re0">$member</span> <span class="sy0">=</span> <a href="http://www.php.net/mysqli_fetch_assoc"><span class="kw3">mysqli_fetch_assoc</span></a><span class="br0">(</span><span class="re0">$result</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'SESS_MEMBER_ID'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="re0">$member</span><span class="br0">[</span><span class="st_h">'mem_id'</span><span class="br0">]</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'SESS_FIRST_NAME'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="re0">$member</span><span class="br0">[</span><span class="st_h">'username'</span><span class="br0">]</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'SESS_LAST_NAME'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="re0">$member</span><span class="br0">[</span><span class="st_h">'password'</span><span class="br0">]</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<a href="http://www.php.net/session_write_close"><span class="kw3">session_write_close</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<a href="http://www.php.net/header"><span class="kw3">header</span></a><span class="br0">(</span><span class="st0">"location: home.php"</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<a href="http://www.php.net/exit"><span class="kw3">exit</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">		<span class="br0">}</span><span class="kw1">else</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">			<span class="co1">//Login failed</span></div></li><li class="li1"><div class="de1">			<span class="re0">$errmsg_arr</span><span class="br0">[</span><span class="br0">]</span> <span class="sy0">=</span> <span class="st_h">'user name and password not found'</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<span class="re0">$errflag</span> <span class="sy0">=</span> <span class="kw4">true</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<span class="kw1">if</span><span class="br0">(</span><span class="re0">$errflag</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">				<span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'ERRMSG_ARR'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="re0">$errmsg_arr</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">				<a href="http://www.php.net/session_write_close"><span class="kw3">session_write_close</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">				<a href="http://www.php.net/header"><span class="kw3">header</span></a><span class="br0">(</span><span class="st0">"location: index.php"</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">				<a href="http://www.php.net/exit"><span class="kw3">exit</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">			<span class="br0">}</span></div></li><li class="li1"><div class="de1">		<span class="br0">}</span></div></li><li class="li1"><div class="de1">	<span class="br0">}</span><span class="kw1">else</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">		<a href="http://www.php.net/die"><span class="kw3">die</span></a><span class="br0">(</span><span class="st0">"Query failed"</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">	<span class="br0">}</span></div></li><li class="li1"><div class="de1"><span class="sy1">?&gt;</span></div></li></ol></pre></div>
+<h2>Creating Our Authentication File</h2>
+<p>Next step is to create our authentication file and save it as auth.php. this code is use to disallow the user to go back as if it still logged in.</p>
+<div class="geshifilter">
+<pre class="php geshifilter-php"><ol><li class="li1"><div class="de1"><span class="kw2">&lt;?php</span></div></li><li class="li1"><div class="de1">	<span class="co1">//Start session</span></div></li><li class="li1"><div class="de1">	<a href="http://www.php.net/session_start"><span class="kw3">session_start</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">	<span class="co1">//Check whether the session variable SESS_MEMBER_ID is present or not</span></div></li><li class="li1"><div class="de1">	<span class="kw1">if</span><span class="br0">(</span><span class="sy0">!</span><a href="http://www.php.net/isset"><span class="kw3">isset</span></a><span class="br0">(</span><span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'SESS_MEMBER_ID'</span><span class="br0">]</span><span class="br0">)</span> <span class="sy0">||</span> <span class="br0">(</span><a href="http://www.php.net/trim"><span class="kw3">trim</span></a><span class="br0">(</span><span class="re0">$_SESSION</span><span class="br0">[</span><span class="st_h">'SESS_MEMBER_ID'</span><span class="br0">]</span><span class="br0">)</span> <span class="sy0">==</span> <span class="st_h">''</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span></div></li><li class="li1"><div class="de1">		<a href="http://www.php.net/header"><span class="kw3">header</span></a><span class="br0">(</span><span class="st0">"location: index.php"</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">		<a href="http://www.php.net/exit"><span class="kw3">exit</span></a><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1">	<span class="br0">}</span></div></li><li class="li1"><div class="de1"><span class="sy1">?&gt;</span></div></li></ol></pre></div>
+<h2>Creating Our Home page</h2>
+<p>Next step is to create a homepage and save it as home.php. </p>
+<div class="geshifilter">
+<pre class="php geshifilter-php"><ol><li class="li1"><div class="de1"><span class="kw2">&lt;?php</span></div></li><li class="li1"><div class="de1">	<span class="kw1">require_once</span><span class="br0">(</span><span class="st_h">'auth.php'</span><span class="br0">)</span><span class="sy0">;</span></div></li><li class="li1"><div class="de1"><span class="sy1">?&gt;</span></div></li><li class="li1"><div class="de1">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</div></li><li class="li1"><div class="de1">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</div></li><li class="li1"><div class="de1">&lt;head&gt;</div></li><li class="li1"><div class="de1">&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /&gt;</div></li><li class="li1"><div class="de1">&lt;title&gt;Untitled Document&lt;/title&gt;</div></li><li class="li1"><div class="de1">&lt;style type="text/css"&gt;</div></li><li class="li1"><div class="de1">&lt;!--</div></li><li class="li1"><div class="de1">.style1 {</div></li><li class="li1"><div class="de1">	font-size: 36px;</div></li><li class="li1"><div class="de1">	font-weight: bold;</div></li><li class="li1"><div class="de1">}</div></li><li class="li1"><div class="de1">--&gt;</div></li><li class="li1"><div class="de1">&lt;/style&gt;</div></li><li class="li1"><div class="de1">&lt;/head&gt;</div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">&lt;body&gt;</div></li><li class="li1"><div class="de1">&lt;p align="center" class="style1"&gt;Login successfully &lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;p align="center"&gt;This page is the home, you can put some stuff here......&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;p align="center"&gt;&lt;a href="index.php"&gt;logout&lt;/a&gt;&lt;/p&gt;</div></li><li class="li1"><div class="de1">&lt;/body&gt;</div></li><li class="li1"><div class="de1">&lt;/html&gt;</div></li></ol></pre></div>
+<p>That’s all you have already created your login page with unique features. Hope this code will help you, see you guys in my next tutorial.</p>
+<p>We've created a more secure registration and login page using CodeIgniter and Ion Auth. We highly recommend you use this instead if you want to secure your site. However, we're using CodeIgniter framework on this. If you are interested, kindly visit <a href="https://www.sourcecodester.com/php/11223/secure-registration-and-login-script-php-and-mysql-using-codeigniter-and-ion-auth.html">Secure Registration and Login Script with PHP and MySQL using CodeIgniter and Ion Auth</a>.</p>
+</div></div></div><div class="field field-name-bottomcontentads field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div style="padding:0 !important; border:none !important; clear:both" ;="">
+<script async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle scads" style="display: inline-block; width: 600px; height: 280px;" data-ad-client="ca-pub-3664195971165750" data-ad-slot="4324011842" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:600px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:600px;background-color:transparent;"><iframe width="600" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;width:600px;height:280px;" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/saved_resource(1).html"></iframe></ins></ins></ins>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div></div></div></div><div class="field field-name-matched-content field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><script async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display: block; height: 363px;" data-ad-client="ca-pub-3664195971165750" data-ad-slot="1699788246" data-ad-format="autorelaxed" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:363px;margin:0;padding:0;position:relative;visibility:visible;width:605px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:363px;margin:0;padding:0;position:relative;visibility:visible;width:605px;background-color:transparent;"><iframe width="605" height="363" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;width:605px;height:363px;" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/saved_resource(2).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div><div class="field field-name-social-media-button field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class="post-ad-left">
+<div class="sm-buttons-box">
+<div class="sm_button">
+<iframe id="twitter-widget-2" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/tweet_button.21783de9dc99fcf78a11eef96926d932.en(1).html" style="position: static; visibility: visible; width: 60px; height: 20px;" data-url="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+<div class="sm_button">
+
+<div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 32px; height: 20px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 32px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I1_1510785094904" name="I1_1510785094904" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/fastbutton(1).html" data-gapiattached="true" title="G+"></iframe></div>
+</div>
+<div class="sm_button">
+<div class="fb-like fb_iframe_widget" data-href="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=157493590948193&amp;container_width=0&amp;href=https%3A%2F%2Fwww.sourcecodester.com%2Ftutorials%2Fphp%2F4341%2Fhow-create-login-page-phpmysql.html&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=false"><span style="vertical-align: bottom; width: 106px; height: 20px;"><iframe name="f1b3cb4585ab944" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/like(1).html" style="border: none; visibility: visible; width: 106px; height: 20px;" class=""></iframe></span></div>
+</div>
+</div>
+<div class="fb-like">
+<div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/SourceCodester" data-layout="standard" data-action="like" data-show-faces="true" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=157493590948193&amp;container_width=60&amp;href=https%3A%2F%2Fwww.facebook.com%2FSourceCodester&amp;layout=standard&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=true"><span style="vertical-align: bottom; width: 450px; height: 20px;"><iframe name="f2b735c53f1072" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/like(2).html" style="border: none; visibility: visible; width: 450px; height: 20px;" class=""></iframe></span></div>
+</div>
+</div>
+<div style="clear:both"></div>
+<hr></div></div></div><ul class="links inline"><li class="comment-add first active"><a href="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html#comment-form" title="Share your thoughts and opinions related to this posting." class="active">Add new comment</a></li>
+<li class="statistics_counter last"><span>1262673 reads</span></li>
+</ul><div class="field field-name-field-tags field-type-taxonomy-term-reference field-label-above"><div class="field-label">Tags:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="https://www.sourcecodester.com/category/tags/login-page-phpmsql">login page in php/msql</a></div><div class="field-item odd"><a href="https://www.sourcecodester.com/category/tags/input-validation-using-php">input validation using php</a></div></div></div><div class="field field-name-post-author field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class="postauthor">
+<div class="user-picture">
+<a href="https://www.sourcecodester.com/users/argie" title="View user profile."><img src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/picture-8777-1405820392.jpg" alt="argie&#39;s picture" title="argie&#39;s picture"></a> </div>
+<h3>Article by <a href="https://www.sourcecodester.com/users/argie">argie</a></h3>
+<p>argie has submitted <em><strong>101</strong></em> source code / articles.</p>
+<p>If you like this post, you can follow SourceCodester on&nbsp;<strong><a href="https://twitter.com/sourcecodester" target="_blank">Twitter</a></strong>.</p>
+<p>Subscribe to&nbsp;<strong>SourceCodester feed via&nbsp;<a href="http://feedproxy.google.com/free-source-code" target="_blank" rel="nofollow">RSS</a>&nbsp;or&nbsp;<a rel="nofollow" target="_blank" href="http://feedburner.google.com/fb/a/mailverify?uri=free-source-code&amp;loc=en_US">EMAIL</a>&nbsp;</strong>to receive instant updates.</p>
+</div></div></div></div><div class="field field-name-facebook-comments field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class="fb-comments fb_iframe_widget" data-href="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html" data-num-posts="10" data-width="608" fb-xfbml-state="rendered"><span style="height: 677px; width: 608px;"><iframe id="f2b2780aaa68f94" name="f2c5aec3919cb48" scrolling="no" title="Facebook Social Plugin" class="fb_ltr" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/comments.html" style="border: none; overflow: hidden; height: 677px; width: 608px;"></iframe></span></div></div></div></div><div id="comments" class="comment-wrapper">
+<h2 class="title">Comments</h2>
+<a id="comment-27998"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">arkard00 (not verified)</span> </p>
+<p class="comment-time">
+Tue, 08/14/2012 - 00:35 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/27998#comment-27998" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/27998#comment-27998" class="permalink" rel="bookmark">Your code was very useful.</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Your code was very useful. Thank you.</p>
+<p>But, how can I show the username in the home page after the validation?</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/27998">reply</a></li>
+</ul> </div> 
+</div>
+<div class="indented"><a id="comment-29413"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 10/19/2012 - 04:54 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/29413#comment-29413" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/29413#comment-29413" class="permalink" rel="bookmark">Showing user name</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>You can display the username by adding something like this:<br>
+}else{<br>
+echo"Welcom " .$_POST['username'];<br>
+}<br>
+after fetching the row i.e $sql=mysql_num_rows($query);<br>
+Thank you</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/29413">reply</a></li>
+</ul> </div> 
+</div>
+<div class="indented"><a id="comment-31155"></a>
+<div class="comment clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<a href="https://www.sourcecodester.com/users/anonymous" title="View user profile." class="username">anonymous</a> </p>
+<p class="comment-time">
+Tue, 12/04/2012 - 04:10 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/31155#comment-31155" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/31155#comment-31155" class="permalink" rel="bookmark">on which page should i put</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>on which page should i put this codes</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/31155">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-79103"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Mon, 08/04/2014 - 16:02 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/79103#comment-79103" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/79103#comment-79103" class="permalink" rel="bookmark">Which page should this code</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Which page should this code be put. <a href="mailto:kuriajmk@gmail.com" rel="nofollow">kuriajmk@gmail.com</a></p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/79103">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-82062"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">shikhar (not verified)</span> </p>
+<p class="comment-time">
+Tue, 01/27/2015 - 20:50 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/82062#comment-82062" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/82062#comment-82062" class="permalink" rel="bookmark">show the username</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>where to put this code in which file?</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/82062">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-82670"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Blake Gillman (not verified)</span> </p>
+<p class="comment-time">
+Wed, 04/15/2015 - 02:14 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/82670#comment-82670" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/82670#comment-82670" class="permalink" rel="bookmark">Display Username Logged in</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Well I noticed that you guys didn't have this solved, so I did it myself. Just put this code above the HTML tag:</p>
+<p>&lt;?php<br>
+require_once('auth.php');<br>
+echo("Logged in as: ");<br>
+echo($_SESSION['UserName']);<br>
+?&gt;</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/82670">reply</a></li>
+</ul> </div> 
+</div>
+</div></div><a id="comment-28568"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 09/14/2012 - 17:30 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/28568#comment-28568" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/28568#comment-28568" class="permalink" rel="bookmark">This helps me alot thank you</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>This helps me alot thank you</p>
+</div><div class="google-auto-placed" style="text-align: center; width: 100%; height: auto; clear: none;"><ins data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-3664195971165750" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 50px;"><ins id="aswift_6_expand" style="display:inline-table;border:none;height:50px;margin:0;padding:0;position:relative;visibility:visible;width:329px;background-color:transparent;"><ins id="aswift_6_anchor" style="display:block;border:none;height:50px;margin:0;padding:0;position:relative;visibility:visible;width:329px;background-color:transparent;"><iframe width="329" height="50" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_6" name="aswift_6" style="left:0;position:absolute;top:0;width:329px;height:50px;" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/saved_resource(3).html"></iframe></ins></ins></ins></div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/28568">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-30802"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Mahesh A (not verified)</span> </p>
+<p class="comment-time">
+Sat, 11/03/2012 - 03:32 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/30802#comment-30802" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/30802#comment-30802" class="permalink" rel="bookmark">Fantastic Article</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Thanks Argie. Your article has helped me a lot. Such a error-less code is what a fresher looks for. Well written n well explained. Thanks buddy.- Mahesh</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/30802">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-31114"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 11/30/2012 - 22:32 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/31114#comment-31114" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/31114#comment-31114" class="permalink" rel="bookmark">perfect</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Gosh, another beautiful tutorial. Appreciate the work. Thank you xxxx</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/31114">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-31184"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+ <div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 12/07/2012 - 10:44 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/31184#comment-31184" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/31184#comment-31184" class="permalink" rel="bookmark">thankyou verymuch..the only</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>thankyou verymuch..the only tutorial worked after trying tons of tutorials...really thankyou....</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/31184">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-31215"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Tue, 12/11/2012 - 04:58 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/31215#comment-31215" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/31215#comment-31215" class="permalink" rel="bookmark">login</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>This tutorial seems really easy to follow but I get the following message when I copy and past into sql<br>
+#1064 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1.CREATE TABLE IF NOT EXISTS `member` (2. `mem_id` int(11) NOT NULL AUTO_INCREM' at line 1</p>
+<p>I dont know what the problem is with the syntax for my version which is 5.0.91-log<br>
+Can you help? sorry am a total newbie and this is probs really easy.</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/31215">reply</a></li>
+</ul> </div> 
+</div>
+<div class="indented"><a id="comment-48519"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 02/15/2013 - 01:23 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/48519#comment-48519" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/48519#comment-48519" class="permalink" rel="bookmark">Take out the leading line</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Take out the leading line numbers. Example:<br>
+1.CREATE ... should be CREATE ...</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/48519">reply</a></li>
+</ul> </div> 
+</div>
+<div class="indented"><a id="comment-82070"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">grateful (not verified)</span> </p>
+<p class="comment-time">
+Thu, 01/29/2015 - 10:31 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/82070#comment-82070" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/82070#comment-82070" class="permalink" rel="bookmark">Take out the leading line</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>yeah you right....</p>
+<p>just delete all the leading line number (example. 1. ---, 2. ---, etc)<br>
+"1. create ...." become just "create ..." delete the leading line number<br>
+Thanks to Argie</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/82070">reply</a></li>
+</ul> </div> 
+</div>
+</div><a id="comment-81456"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Noreen (not verified)</span> </p>
+<p class="comment-time">
+Thu, 10/16/2014 - 15:35 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/81456#comment-81456" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/81456#comment-81456" class="permalink" rel="bookmark">to your error</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>just change the 'member' to MEMBER and others..</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/81456">reply</a></li>
+</ul> </div> 
+</div>
+</div><a id="comment-31229"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Wed, 12/12/2012 - 14:44 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/31229#comment-31229" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/31229#comment-31229" class="permalink" rel="bookmark">vallidations</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>hi<br>
+thanks a lot.<br>
+Ur code is very useful bt can you provide the validations to this form</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/31229">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-31246"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 12/14/2012 - 15:12 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/31246#comment-31246" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/31246#comment-31246" class="permalink" rel="bookmark">thanks</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>realy useful source codes.</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/31246">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-31356"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Tue, 12/18/2012 - 17:05 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/31356#comment-31356" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/31356#comment-31356" class="permalink" rel="bookmark">super thank you to the</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>super thank you to the creator of this program...<br>
+this really helps a lot...thank you!!!</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/31356">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-31902"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Sat, 12/22/2012 - 20:52 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/31902#comment-31902" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/31902#comment-31902" class="permalink" rel="bookmark">how to edit the profile page?</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>i need urgent....,</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/31902">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-40277"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Wed, 01/30/2013 - 04:43 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/40277#comment-40277" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/40277#comment-40277" class="permalink" rel="bookmark">i cant connect to database</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>why i cant connect to database sir ?</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/40277">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-40514"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Thu, 01/31/2013 - 18:33 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/40514#comment-40514" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/40514#comment-40514" class="permalink" rel="bookmark">Thank you!</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>You have made my day! thanks :) everything is working for me.</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/40514">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-49321"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 02/15/2013 - 18:28 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/49321#comment-49321" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/49321#comment-49321" class="permalink" rel="bookmark">update</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Your codes needs to be updated!</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/49321">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-53508"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Thu, 02/21/2013 - 10:55 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/53508#comment-53508" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/53508#comment-53508" class="permalink" rel="bookmark">Very useful</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Big thanks for the registration and login scripts, i've just implemented both and they work beautifully (after initial confusion with double index pages heh) - definately the most simple/logical tutorial to follow on this topic ive seen</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/53508">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-53857"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 02/22/2013 - 03:31 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/53857#comment-53857" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/53857#comment-53857" class="permalink" rel="bookmark">registation validation</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>your code very useful ,but if i want to validate the registration form ,that is why a unique "username" will save or it already used<br>
+echo "This UserName is already used. Please try another username"<br>
+what can i do ????????????? please help me<br>
+my E_mail - "<a href="mailto:uddin.mohi16@yahoo.com" rel="nofollow">uddin.mohi16@yahoo.com</a>" I already use your code it is useful.thanks,</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/53857">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-55789"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Mon, 03/04/2013 - 09:39 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/55789#comment-55789" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/55789#comment-55789" class="permalink" rel="bookmark">errors,errors errors..... </a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>errors,errors errors..... </p>
+<p>"Warning: session_regenerate_id() [function.session-regenerate-id]: Cannot regenerate session id - headers already sent in /Applications/XAMPP/xamppfiles/htdocs/xampp/example/section2/sec1/login_exec.php on line 53</p>
+<p>Warning: Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/xampp/example/section2/sec1/connection.php:2) in /Applications/XAMPP/xamppfiles/htdocs/xampp/example/section2/sec1/login_exec.php on line 59"</p>
+<p>help please!!!</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/55789">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-55869"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Tue, 03/05/2013 - 19:01 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/55869#comment-55869" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/55869#comment-55869" class="permalink" rel="bookmark">where is the main content?</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>what will be the input for the login form and how to incorporate the same in the backend?main issues are not there.disgusting.</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/55869">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-56117"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Sat, 03/09/2013 - 12:37 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/56117#comment-56117" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/56117#comment-56117" class="permalink" rel="bookmark">thanks</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>thank you!! this tutorial helped me a lot :)</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/56117">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-56264"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Mon, 03/11/2013 - 16:29 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/56264#comment-56264" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/56264#comment-56264" class="permalink" rel="bookmark">user name and password not found</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>user name and password not found-- am getting this error after i login.<br>
+i already edited the connection.php. below is my code.. thanks in advance.</p>
+<p>&lt;?php<br>
+$mysql_hostname = "localhost";<br>
+$mysql_user = "myusername";<br>
+$mysql_password = "mypassword";<br>
+$mysql_database = "besthome_simple_login";<br>
+$prefix = "";<br>
+$bd = mysql_connect($mysql_hostname, $mysql_user, $mysql_password) or die("Could not connect database");<br>
+mysql_select_db($mysql_database, $bd) or die("Could not select database");<br>
+?&gt;</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/56264">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-56265"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Mon, 03/11/2013 - 16:43 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/56265#comment-56265" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/56265#comment-56265" class="permalink" rel="bookmark">message could not connect to database</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>am getting "Could not select database"<br>
+please help.. thanks in advance</p>
+<p>&lt;?php<br>
+$mysql_hostname = "localhost";<br>
+$mysql_user = "my_user";<br>
+$mysql_password = "mypassword123";<br>
+$mysql_database = "mydatabase";<br>
+$prefix = "";<br>
+$bd = mysql_connect($mysql_hostname, $mysql_user, $mysql_password) or die("Could not connect database");<br>
+mysql_select_db($mysql_database, $bd) or die("Could not select database");<br>
+?&gt;</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/56265">reply</a></li>
+</ul> </div> 
+</div>
+<div class="indented"><a id="comment-74436"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Thu, 10/31/2013 - 18:19 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/74436#comment-74436" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/74436#comment-74436" class="permalink" rel="bookmark">$mysql_user = "my_user";</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>$mysql_user = "my_user";<br>
+$mysql_password = "mypassword123";<br>
+$mysql_database = "mydatabase";<br>
+$mysql_hostname = "localhost";<br>
+$conn = mysql_connect($mysql_hostname, $mysql_user, $mysql_password) or die("Could not connect database");<br>
+mysql_select_db($mysql_database, $conn) or die("Could not select database");</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/74436">reply</a></li>
+</ul> </div> 
+</div>
+</div><a id="comment-56490"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 03/15/2013 - 13:41 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/56490#comment-56490" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/56490#comment-56490" class="permalink" rel="bookmark">creating a registration page using PHP n mysql</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>•user name and password not found</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/56490">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-56515"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Sat, 03/16/2013 - 14:39 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/56515#comment-56515" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/56515#comment-56515" class="permalink" rel="bookmark">Logout not working</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Logged out. Clicked on back. No login page. Logging in directly.</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/56515">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-56589"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Mon, 03/18/2013 - 10:39 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/56589#comment-56589" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/56589#comment-56589" class="permalink" rel="bookmark">hank for share</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>easy to understand</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/56589">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-56763"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 03/22/2013 - 20:29 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/56763#comment-56763" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/56763#comment-56763" class="permalink" rel="bookmark">Password not case sensitive</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>This was really helpful but I have noticed that the password is not case sensitive which obviously limits security. I don't know if it is my mysql database settings or the actual login script that is the problem</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/56763">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-56946"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Wed, 03/27/2013 - 16:50 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/56946#comment-56946" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/56946#comment-56946" class="permalink" rel="bookmark">thank</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>good explore</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/56946">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-57007"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 03/29/2013 - 06:13 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/57007#comment-57007" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/57007#comment-57007" class="permalink" rel="bookmark">USER CREATION</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>how do i create user and passwords who will login into then system after the login page creation</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/57007">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-57802"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Sat, 04/13/2013 - 15:49 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/57802#comment-57802" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/57802#comment-57802" class="permalink" rel="bookmark">webservices</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>how to create web services in login page php and mysql.<br>
+please help me.<br>
+thank u.</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/57802">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-67060"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Sun, 05/19/2013 - 22:50 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/67060#comment-67060" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/67060#comment-67060" class="permalink" rel="bookmark">????</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Warning: session_start() [function.session-start]: Cannot send session cookie - headers already sent by (output started at C:\xampplite\htdocs\index.php:1) in C:\xampplite\htdocs\index.php on line 3</p>
+<p>Warning: session_start() [function.session-start]: Cannot send session cache limiter - headers already sent (output started at C:\xampplite\htdocs\index.php:1) in C:\xampplite\htdocs\index.php on line 3</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/67060">reply</a></li>
+</ul> </div> 
+</div>
+<div class="indented"><a id="comment-76654"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">vikasgenus (not verified)</span> </p>
+<p class="comment-time">
+Wed, 01/15/2014 - 01:02 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/76654#comment-76654" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/76654#comment-76654" class="permalink" rel="bookmark">Warning: session_start() </a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>i have also same Warning: session_start() [function.session-start]: Cannot send session cache limiter - headers already sent </p>
+<p>if you have any answer please help me.<br><a href="mailto:vikasgenus@gmail.com" rel="nofollow">vikasgenus@gmail.com</a></p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/76654">reply</a></li>
+</ul> </div> 
+</div>
+</div><a id="comment-69701"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Tue, 05/28/2013 - 02:38 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/69701#comment-69701" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/69701#comment-69701" class="permalink" rel="bookmark">Thank you</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Thank you</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/69701">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-69705"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Tue, 05/28/2013 - 06:10 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/69705#comment-69705" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/69705#comment-69705" class="permalink" rel="bookmark">ligin form</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>thanks dude, it works</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/69705">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-70510"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 05/31/2013 - 01:16 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/70510#comment-70510" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/70510#comment-70510" class="permalink" rel="bookmark">help....</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Warning: mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\BloodBank\connetion.php on line 6<br>
+Could not connect database</p>
+<p>Line 6 in connection...<br>
+$bd = mysql_connect($mysql_hostname, $mysql_user, $mysql_password) or die("Could not connect database");<br>
+mysql_select_db($mysql_database, $bd) or die("Could not select database");</p>
+<p>Plz help me.</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/70510">reply</a></li>
+</ul> </div> 
+</div>
+<div class="indented"><a id="comment-71945"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">alikargaran (not verified)</span>  </p>
+<p class="comment-time">
+Sat, 07/27/2013 - 14:29 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/71945#comment-71945" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/71945#comment-71945" class="permalink" rel="bookmark">answer</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>hi...first you should create your database and create your user in your database with password then in connection.php follow:</p>
+<p>&lt;?php<br>
+$mysql_hostname = "localhost";<br>
+$mysql_user = "your user that you are creating in your database";<br>
+$mysql_password = "your user password that you are creating in your database";<br>
+$mysql_database = "your database";<br>
+$prefix = "";<br>
+$bd = mysql_connect($mysql_hostname, $mysql_user, $mysql_password) or die("Could not connect database");<br>
+mysql_select_db($mysql_database, $bd) or die("Could not select database");<br>
+?&gt;</p>
+<p>if you have any question contact me with my email:<br><a href="mailto:a.kargaran_d@yahoo.com" rel="nofollow">a.kargaran_d@yahoo.com</a></p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/71945">reply</a></li>
+</ul> </div> 
+</div>
+<div class="indented"><a id="comment-72236"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Sakthi (not verified)</span> </p>
+<p class="comment-time">
+Wed, 08/07/2013 - 12:57 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/72236#comment-72236" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/72236#comment-72236" class="permalink" rel="bookmark">$mysql_hostname =""; what</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>$mysql_hostname =""; what should come here</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/72236">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-87702"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Sufiyan (not verified)</span> </p>
+<p class="comment-time">
+Sun, 12/25/2016 - 04:36 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/87702#comment-87702" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/87702#comment-87702" class="permalink" rel="bookmark">Mysql query </a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Can u plz explain how I can write username and password in mysql database where I can put username and password query in database</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/87702">reply</a></li>
+</ul> </div> 
+</div>
+</div></div><a id="comment-70559"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Sat, 06/01/2013 - 21:50 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/70559#comment-70559" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/70559#comment-70559" class="permalink" rel="bookmark">If you would like to obtain a</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>If you would like to obtain a good deal from this paragraph then you have to apply these techniques to your won web site.</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/70559">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-70694"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Thu, 06/06/2013 - 13:43 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/70694#comment-70694" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/70694#comment-70694" class="permalink" rel="bookmark">Small Error</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>There is just a small error. The query should be "SELECT COUNT(*) FROM tablename WHERE..." instead of whatever you wrote Argie. Except that, everything else is fine.</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/70694">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-70695"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Thu, 06/06/2013 - 13:44 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/70695#comment-70695" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/70695#comment-70695" class="permalink" rel="bookmark">Error</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>There is just a small missing detail. The query should be "SELECT COUNT(*) FROM tablename WHERE..." instead of whatever you wrote Argie. Except that, everything else is fine.</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/70695">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-70881"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Mon, 06/10/2013 - 22:48 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/70881#comment-70881" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/70881#comment-70881" class="permalink" rel="bookmark">Warning message</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>hello, i'm Ameh james...thanks for this tutorial.<br>
+however when i tried it, on the web page after clicking the login button...i get this error message:<br>
+"Warning: mysql_num_rows(): supplied argument is not a valid MySQL result resource in C:\xampp\htdocs\test\links\login.php on line 13<br>
+Sorry, there is no username John with the specified password.Try again"<br>
+"John" is what i have in the database. please i need help</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/70881">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-71236"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Tue, 06/18/2013 - 21:24 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/71236#comment-71236" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/71236#comment-71236" class="permalink" rel="bookmark">error message</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Warning: Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\test\REG1\login_exec.php:11) in D:\xampp\htdocs\test\REG1\login_exec.php on line 70</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/71236">reply</a></li>
+</ul> </div> 
+</div>
+<a id="comment-71370"></a>
+<div class="comment comment-by-anonymous clearfix">
+<div class="attribution">
+<div class="comment-submitted">
+<p class="commenter-name">
+<span class="username">Anonymous (not verified)</span> </p>
+<p class="comment-time">
+Fri, 06/28/2013 - 21:01 </p>
+<p class="comment-permalink">
+<a href="https://www.sourcecodester.com/comment/71370#comment-71370" class="permalink" rel="bookmark">Permalink</a> </p>
+</div>
+</div>
+<div class="comment-text">
+<div class="comment-arrow"></div>
+<h3><a href="https://www.sourcecodester.com/comment/71370#comment-71370" class="permalink" rel="bookmark">IT</a></h3>
+<div class="content">
+<div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>it is nice tutorial but where i found the username and password?</p>
+</div></div></div> </div> 
+<ul class="links inline"><li class="comment-reply first last"><a href="https://www.sourcecodester.com/comment/reply/4341/71370">reply</a></li>
+</ul> </div> 
+</div>
+<h2 class="element-invisible">Pages</h2><div class="item-list"><ul class="pager"><li class="pager-current first">1</li>
+<li class="pager-item"><a title="Go to page 2" href="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html?page=1">2</a></li>
+<li class="pager-item"><a title="Go to page 3" href="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html?page=2">3</a></li>
+<li class="pager-next"><a title="Go to next page" href="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html?page=1">next ›</a></li>
+<li class="pager-last last"><a title="Go to last page" href="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html?page=2">last »</a></li>
+</ul></div>
+<h2 class="title comment-form">Add new comment</h2>
+<form class="comment-form" action="https://www.sourcecodester.com/comment/reply/4341" method="post" id="comment-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-name">
+<label for="edit-name">Your name </label>
+<input type="text" id="edit-name" name="name" value="" size="30" maxlength="60" class="form-text">
+</div>
+<div class="form-item form-type-textfield form-item-subject">
+<label for="edit-subject">Subject </label>
+<input type="text" id="edit-subject" name="subject" value="" size="60" maxlength="64" class="form-text">
+</div>
+<div class="field-type-text-long field-name-comment-body field-widget-text-textarea form-wrapper" id="edit-comment-body"><div id="comment-body-add-more-wrapper"><div class="text-format-wrapper"><div class="form-item form-type-textarea form-item-comment-body-und-0-value">
+<label for="edit-comment-body-und-0-value">Comment <span class="form-required" title="This field is required.">*</span></label>
+<div class="form-textarea-wrapper resizable textarea-processed resizable-textarea"><textarea class="text-full form-textarea required" id="edit-comment-body-und-0-value" name="comment_body[und][0][value]" cols="60" rows="5"></textarea><div class="grippie"></div></div>
+</div>
+<fieldset class="filter-wrapper form-wrapper" id="edit-comment-body-und-0-format"><div class="fieldset-wrapper"><div class="filter-help form-wrapper" id="edit-comment-body-und-0-format-help"><p><a href="https://www.sourcecodester.com/filter/tips" target="_blank">More information about text formats</a></p></div><div class="form-item form-type-select form-item-comment-body-und-0-format">
+<label for="edit-comment-body-und-0-format--2">Text format </label>
+<select class="filter-list form-select" id="edit-comment-body-und-0-format--2" name="comment_body[und][0][format]"><option value="1" selected="selected">Filtered HTML</option><option value="5">Plain text</option></select>
+</div>
+<div class="filter-guidelines form-wrapper filter-guidelines-processed" id="edit-comment-body-und-0-format-guidelines"><div class="filter-guidelines-item filter-guidelines-1" style="display: block;"><h3 style="display: none;">Filtered HTML</h3><ul class="tips"><li>Web page addresses and e-mail addresses turn into links automatically.</li><li>Allowed HTML tags: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; &lt;blockquote&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt; &lt;table&gt; &lt;tr&gt; &lt;td&gt; &lt;th&gt; &lt;img&gt; &lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;iframe&gt;</li><li>You may insert videos with [video:URL]</li><li>You can enable syntax highlighting of source code with the following tags: <code>&lt;code&gt;</code>, <code>&lt;blockcode&gt;</code>, <code>&lt;asp&gt;</code>, <code>&lt;c&gt;</code>, <code>&lt;cpp&gt;</code>, <code>&lt;csharp&gt;</code>, <code>&lt;css&gt;</code>, <code>&lt;html4strict&gt;</code>, <code>&lt;java&gt;</code>, <code>&lt;javascript&gt;</code>, <code>&lt;mysql&gt;</code>, <code>&lt;php&gt;</code>, <code>&lt;python&gt;</code>, <code>&lt;sql&gt;</code>, <code>&lt;vb&gt;</code>, <code>&lt;vbnet&gt;</code>. The supported tag styles are: <code>&lt;foo&gt;</code>, <code>[foo]</code>.</li><li>Lines and paragraphs break automatically.</li></ul></div><div class="filter-guidelines-item filter-guidelines-5" style="display: none;"><h3 style="display: none;">Plain text</h3><ul class="tips"><li>No HTML tags allowed.</li><li>Lines and paragraphs break automatically.</li></ul></div></div></div></fieldset>
+</div>
+</div></div><input type="hidden" name="form_build_id" value="form--8A8YZgDxPpHbh3NlfNDg-rDwQgCmyWLTF4qdm3Yn4M">
+<input type="hidden" name="form_id" value="comment_node_tutorials_form">
+<fieldset class="captcha form-wrapper"><legend><span class="fieldset-legend">CAPTCHA</span></legend><div class="fieldset-wrapper"><div class="fieldset-description">This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.</div><input type="hidden" name="captcha_sid" value="9385540">
+<input type="hidden" name="captcha_token" value="606e466cbab8aa45a557e6c50d2977cc">
+<input type="hidden" name="captcha_response" value="Google no captcha">
+<div class="g-recaptcha" data-sitekey="6LcB6h8UAAAAAEctXXi_VSE1ClhFg-j6l_ZSyiJr" data-theme="light" data-type="image"><div style="width: 304px; height: 78px;"><div><iframe src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/anchor.html" width="304" height="78" role="presentation" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div></div></fieldset>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Save" class="form-submit"><input type="submit" id="edit-preview" name="op" value="Preview" class="form-submit"></div></div></form> </div>
+</div> </div>
+</div> 
+</div>
+
+</div>
+</section> 
+</div>
+<aside id="sidebar" role="complementary">
+<div class="region region-sidebar-first">
+<div id="block-block-5" class="block block-block">
+<h2>Share Your Source Code</h2>
+<div class="content">
+Do you have source code, articles, tutorials, web links, and books to share? You can write your own content here. You can even have your own blog.
+<br>
+<br>
+<a href="https://www.sourcecodester.com/user?destination=submit">Submit now...</a> </div>
+</div> 
+<div id="block-block-29" class="block block-block">
+<h2>Sponsor</h2>
+<div class="content">
+<div id="bsap_1242339" class="bsap bsap_1242339" data-serve="CVAILKV">
+<style type="text/css">
+div.bsap_1242339{width:100%;display:block;}div.bsap_1242339 a{width:125px;}div.bsap_1242339 a img{padding:0;}div.bsap_1242339 a em{font-style:normal;}div.bsap_1242339 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0 4px 10px 0;text-align:center;text-decoration:none;overflow:hidden;float:left;}
+div.bsap_1242339 img{border:0;clear:right;}
+div.bsap_1242339 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}
+div.bsap_1242339 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}
+div.bsap_1242339 iframe{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0 4px 10px 0;text-align:center;text-decoration:none;overflow:hidden;float:left;}div.bsap_1242339 a{line-height:100%;}div.bsap_1242339 a.adhere{width:125px;height:125px;line-height:1000%;}html>body div.bsap_1242339 a.adhere{width:123px;height:123px;}div.bsap_1242339 img.s{height:0;width:0;}
+</style>
+<!-- no ad --><!-- no ad --><!-- no ad --><a href="https://srv.buysellads.com/ads/click/x/GTND42QJCTSIEKQUCABLYKQMC6YD52QWCWYD6Z3JCWYIT53LF67IEKJKC6BI4K3UFT7I6K3EHJNCLSIZ" class="ad3 odd " title="Programming Help from AssignmentExpert.com" id="bsa_7161800" target="_blank" rel="nofollow">
+<img src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/5586668-1456417095.gif" width="125" height="125" alt=""></a><!-- no ad --><!-- no ad --><!-- no ad --><!-- no ad -->
+
+<a href="http://www.buysellads.com/buy/detail/4673/zone/1242339?utm_source=site_4673&amp;utm_medium=website&amp;utm_campaign=imagetext&amp;utm_content=zone_1242339" class="adhere">Advertise Here</a>
+
+
+<script type="text/javascript" id="auto_2" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(); </script></div>
+<div style="clear:both;"></div>
+</div>
+</div> 
+<div id="block-block-13" class="block block-block">
+<div class="content">
+<script src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/email-decode.min.js"></script><script async="" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-3664195971165750" data-ad-slot="7500611043" data-adsbygoogle-status="done"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;width:300px;height:600px;" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/saved_resource(4).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div> 
+<div id="block-views-popular-source-code-block-2" class="block block-views">
+<h2>Popular Source Code (Today)</h2>
+<div class="content">
+<div class="view view-popular-source-code view-id-popular_source_code view-display-id-block_2 view-dom-id-f12be0c7335cbf08642ed09a2328ff87">
+<div class="view-content">
+<div class="item-list"> <ul> <li class="views-row views-row-1 views-row-odd views-row-first">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/php/11326/online-ticket-reservation.html">Online Ticket Reservation</a></span> </div></li>
+<li class="views-row views-row-2 views-row-even">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/visual-basic-net/10990/sales-and-inventory-management-software.html">Sales and Inventory Management Software(With Barcode)</a></span> </div></li>
+<li class="views-row views-row-3 views-row-odd">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/android/11727/zagelanews-android-app.html">Zagelanews Android App</a></span> </div></li>
+<li class="views-row views-row-4 views-row-even">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/php/11771/simple-student-report-system-phpmysql.html">Simple Student Report System in PHP/MYSQL</a></span> </div></li>
+<li class="views-row views-row-5 views-row-odd">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/php/4959/simple-barcode-integration-system-using-php-and-mysql.html">Simple Barcode Integration System Using PHP and MySQL</a></span> </div></li>
+<li class="views-row views-row-6 views-row-even">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/java/6149/hospital-management-system-java-mysql.html">Hospital Management System (Java + MySQL) *Updated*</a></span> </div></li>
+<li class="views-row views-row-7 views-row-odd">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/c/9744/oop-login-using-c.html">OOP Login Using C#</a></span> </div></li>
+<li class="views-row views-row-8 views-row-even">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/tutorials/php/4341/how-create-login-page-phpmysql.html">How to Create Login Page in PHP/MySQL</a></span> </div></li>
+<li class="views-row views-row-9 views-row-odd">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/php/4432/simple-chat-system-using-phpmysql-ajax.html">Simple Chat System Using PHP/MySQL with ajax</a></span> </div></li>
+<li class="views-row views-row-10 views-row-even views-row-last">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/visual-basic-net/7211/hospital-management-system-ali-xihuny-aishath-areesha-2k14.html">Hospital Management System (Ali Xihuny &amp; Aishath Areesha) - 2K14</a></span> </div></li>
+</ul></div> </div>
+</div> </div>
+</div> 
+<div id="block-views-random-source-code-block-1" class="block block-views">
+<h2>Random Source Code</h2>
+<div class="content">
+<div class="view view-random-source-code view-id-random_source_code view-display-id-block_1 view-dom-id-517eebc5584fd75fe52e961186c85716">
+<div class="view-content">
+<div class="item-list"> <ul> <li class="views-row views-row-1 views-row-odd views-row-first">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/visual-basic/5677/picture-swapper-vb6.html">Picture Swapper VB6</a></span> </div></li>
+<li class="views-row views-row-2 views-row-even">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/php/11496/export-mysql-table-excel.html">Export mysql table to excel</a></span> </div></li>
+<li class="views-row views-row-3 views-row-odd">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/visual-basic/addition-2-numbers.html">ADDITION OF 2 NUMBERS</a></span> </div></li>
+<li class="views-row views-row-4 views-row-even">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/visual-basic-net/9508/simple-contact-management-application.html">Simple Contact Management Application</a></span> </div></li>
+<li class="views-row views-row-5 views-row-odd">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/microsoft-access/4965/employee-record-management-information-system.html">Employee Record Management Information System</a></span> </div></li>
+<li class="views-row views-row-6 views-row-even">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/visual-basic/4492/excel-file-merger.html">Excel File Merger</a></span> </div></li>
+<li class="views-row views-row-7 views-row-odd">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/visual-basic-net/web-browser.html">Web Browser</a></span> </div></li>
+<li class="views-row views-row-8 views-row-even">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/php/6779/simple-crud-file-handling-system.html">Simple CRUD File Handling System</a></span> </div></li>
+<li class="views-row views-row-9 views-row-odd">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/visual-basic-net/5312/enrollment-system.html">Enrollment System</a></span> </div></li>
+<li class="views-row views-row-10 views-row-even views-row-last">
+<div class="views-field views-field-title"> <span class="field-content"><a href="https://www.sourcecodester.com/visual-basic/4728/fifteen-puzzle.html">Fifteen Puzzle</a></span> </div></li>
+</ul></div> </div>
+</div> </div><div class="google-auto-placed" style="text-align: center; width: 100%; height: auto; clear: none;"><ins data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-3664195971165750" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 250px;"><ins id="aswift_5_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:306px;background-color:transparent;"><ins id="aswift_5_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:306px;background-color:transparent;"><iframe width="306" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;width:306px;height:250px;" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/saved_resource(5).html"></iframe></ins></ins></ins></div>
+</div> 
+<div id="block-block-11" class="block block-block">
+<h2>Receive Free Updates</h2>
+<div class="content">
+<div style="float:left">
+<form style="border:0px solid #ccc;padding:10px;text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post">
+Enter your email address:
+<input style="width: 140px;" name="email" type="text">
+<input name="uri" type="hidden" value="free-source-code">
+<input name="loc" type="hidden" value="en_US">
+<input type="submit" value="Subscribe">
+Delivered by <a href="https://feedburner.google.com/" target="_blank">FeedBurner</a>
+</form>
+</div>
+<div align="center"><a title="Subscribe to my feed" rel="alternate" type="application/rss+xml" href="https://feedproxy.google.com/free-source-code"><img style="border:0" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/feed-icon32x32.png" alt=""></a></div>
+<div align="center"><a href="https://www.sourcecodester.com/what-rss.html">What is RSS</a></div>
+<div align="center"><a href="https://feeds2.feedburner.com/free-source-code"><img style="border:0" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/free-source-code" alt="" width="88" height="26"></a></div>
+
+<div id="___plusone_2" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 38px; height: 24px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 38px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I2_1510785094933" name="I2_1510785094933" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/fastbutton(2).html" data-gapiattached="true" title="G+"></iframe></div>
+<script type="text/javascript">
+  window.___gcfg = {
+	lang: 'en-US'
+  };
+
+  (function() {
+	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	po.src = 'https://apis.google.com/js/plusone.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/follow_button.21783de9dc99fcf78a11eef96926d932.en.html" style="position: static; visibility: visible; width: 244px; height: 20px;" data-screen-name="sourcecodester"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> </div>
+</div> 
+<div id="block-block-43" class="block block-block">
+<h2>Connect on Facebook</h2>
+<div class="content">
+<div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/SourceCodester" data-width="292" data-show-faces="true" data-stream="false" data-show-border="true" data-header="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=157493590948193&amp;container_width=306&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FSourceCodester&amp;locale=en_US&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=false&amp;width=292"><span style="vertical-align: bottom; width: 292px; height: 214px;"><iframe name="f387db4d8958c1" width="292px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/like_box.html" style="border: none; visibility: visible; width: 292px; height: 214px;" class=""></iframe></span></div> </div>
+</div> 
+<div id="block-book-navigation" class="block block-book">
+<h2>Book navigation</h2>
+<div class="content">
+<div id="book-block-menu-5225" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/book/5225/android-tutorial.html">Android Tutorial</a></li>
+</ul> </div>
+<div id="book-block-menu-6085" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/book/6085/c-tutorial.html">C# Tutorial</a></li>
+</ul> </div>
+<div id="book-block-menu-4810" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/book/4810/codeigniter-tutorial.html">CodeIgniter Tutorial</a></li>
+</ul> </div>
+<div id="book-block-menu-6382" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/tutorials/htmlcss/6382/css-tutorial.html">CSS Tutorial</a></li>
+</ul> </div>
+<div id="book-block-menu-7757" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/book/7757/data-structures-cpp.html">Data Structures in C++</a></li>
+</ul> </div>
+<div id="book-block-menu-7948" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/book/7948/fundamentals-c-language.html">Fundamentals of C Language</a></li>
+</ul> </div>
+<div id="book-block-menu-9467" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/tutorials/java/9467/java-tutorial.html">Java Tutorial</a></li>
+</ul> </div>
+<div id="book-block-menu-7551" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/book/7551/learn-c-15-days.html">Learn C in 15 Days</a></li>
+</ul> </div>
+<div id="book-block-menu-8090" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/book/8090/learn-object-oriented-programming-c.html">Learn Object Oriented Programming in C++</a></li>
+</ul> </div>
+<div id="book-block-menu-7670" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/book/7670/object-oriented-programming-c.html">Object Oriented Programming in C++</a></li>
+</ul> </div>
+<div id="book-block-menu-3673" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/tutorials/php/php-tutorial.html">PHP Tutorial</a></li>
+</ul> </div>
+<div id="book-block-menu-2280" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/Tutorials/sql/sql-tutorial.html">SQL Tutorial</a></li>
+</ul> </div>
+<div id="book-block-menu-5645" class="book-block-menu">
+<ul class="menu"><li class="first last collapsed"><a href="https://www.sourcecodester.com/book/5645/visual-basic-tutorial.html">Visual Basic Tutorial</a></li>
+</ul> </div>
+</div>
+</div> 
+</div>
+
+</aside>
+</div><div class="google-auto-placed" style="text-align: center; width: 100%; height: auto; clear: both;"><ins data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-3664195971165750" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 90px;"><ins id="aswift_7_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1000px;background-color:transparent;"><ins id="aswift_7_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1000px;background-color:transparent;"><iframe width="1000" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_7" name="aswift_7" style="left:0;position:absolute;top:0;width:1000px;height:90px;" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/saved_resource(6).html"></iframe></ins></ins></ins></div>
+<footer id="footer-bottom">
+<div id="footer-area" class="clearfix">
+<div id="footer-block-wrap" class="clearfix in2">
+<div class="footer-block">
+<div class="region region-footer-first">
+<div id="block-menu-menu-misc-menu" class="block block-menu">
+<div class="content">
+<ul class="menu"><li class="first leaf"><a href="https://www.sourcecodester.com/about-sourcecodester.html" title="">About Us</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/advertise-us.html" title="">Advertise Here</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/faq" title="">FAQ</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/forum" title="">Forums</a></li>
+<li class="last leaf"><a href="https://www.sourcecodester.com/hire-us-do-your-work.html" title="">Hire Us</a></li>
+</ul> </div>
+</div> 
+</div>
+
+</div> <div class="footer-block">
+<div class="region region-footer-second">
+<div id="block-menu-menu-privacy" class="block block-menu">
+<div class="content">
+<ul class="menu"><li class="first leaf"><a href="https://www.sourcecodester.com/disclaimer.html" title="">Disclaimer</a></li>
+<li class="leaf"><a href="https://www.sourcecodester.com/privacy.html" title="">Privacy Statement</a></li>
+<li class="last leaf"><a href="https://www.sourcecodester.com/terms-and-conditions.html" title="">Terms and Agreement</a></li>
+</ul> </div>
+</div> 
+</div>
+
+</div> </div>
+</div>
+<div id="bottom" class="clearfix">
+<div class="copyright">Copyright © 2017, <a href="https://www.sourcecodester.com/">Free source code, tutorials and articles</a></div>
+</div>
+</footer>
+</div><ins class="adsbygoogle" data-adsbygoogle-status="done" style="display: none; width: auto; height: auto;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe width="0" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:0px;height:0px;" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/saved_resource(7).html"></iframe></ins></ins></ins>
+<script type="text/javascript" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/js__QERVh_Fzf6p9iHQYCmUr1O2jFHk11e-Q95akflX9HwI__JSeQmfvtfZjPwtnI4bIh5Z2ePRm2PQCEu653byvDXfU__dd3S9GTwy0OpssQ1-F6lsXCXAJlSzYV6yiUY9wVVTeE.js"></script>
+
+<script data-tc-id="vg9j5cv5">
+  var _tcq = _tcq || []; _tcq.push(['init', 'vg9j5cv5']); 
+  (function(d, s) {
+      var e = d.createElement(s); e.type = 'text/javascript'; e.async = true;
+      e.src = '//s.tcimg.com/w/v3/trendcounter.js';
+      var f = d.getElementsByTagName(s)[0]; f.parentNode.insertBefore(e, f);
+  })(document, 'script');
+</script><a href="https://www.trendcounter.com/report/vg9j5cv5/" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAAAnFBMVEUeVXgnXoAlXH/Y4eYiWnwUSmYgV3nAz9iOvds8bYtUf5pUh6dilbQwZYeHttV4qciQrLx/sM5tkahNgKF5mq9NeZTN2eCovspIdpO1x9Jbjq5RfJeAsM5xosE3bI1jlbVskadFepowZIWetsRqm7urwMx9nrI4bY6HpbdgiKFDcY44aYiVr79zlatojaVMgKFbg5yTrr5qnLs+c5VsTh7KAAACYElEQVRIx+zR0WrDMAwF0E5XRcgwMMLYDn0JKS0ta8v+/+umpEnWsBU2ur7tPhhzE06Eslo/Kav1y1PyD9/CNKaGKZUezwTrCTfJh+6P4JqxTEP3gvAbeDeBJ9pjyMXbV/wYPpZvYZ130NH2c2QBDAVdg1xNMiIVCIIBsQqkJqEAlf4xAI2AmUi5gTeTeyY67a7je20gRaIklIpBA1J/HL2qTaRtGWH/Xoylv4acUOkrPP6ybgErRQBi4nc/COYViZHJCBvFHjZ4TGiGmXmEL8qsm80Zfbw+onOYU8McWmGdJ2afmLelzV1yuOUYDw2HrMNr1yxg7Jn3ACZYBa3DvmOkAdYCySEBh2HHKmhGOFx3XO7A78y7GX4sS/iNGc+AhfmjnbprbRiEwgBcQd4d8AuR3Eg0SNIFWrZ+/f//tmOTrSlZobDtbu/V8aAPBwV3S9iOMjop3Sg5XZBTkloCrZmLLjyGeynfl/BZSUdC2LuDpnVruKiHE89vd1rCKgrblXIeW0qya8mOtanSKFtHrbm229BJYXnZBeHIXoi6TxhAM1kN0H/BALIruuioBoVUtIZKALxQEZ47wWRY43NtaAUd1ABwkVFzBx+BfbO/wbCp8DTZE5HSAcYDmWsLbyrEpfEmBpevMO+A0D4s4BnrUTM/JDgDCTiLxKbRA+pIUQHucoUpC8uwcQ4xzhMzTQsY20nbvh1f+/m+wVGOpQE8sjXakc2AFcBBV/igyXqGkRQKeX2odxyJ9BLerf5jgWdjaL13hqv8cueennc1KXwPb6bsmls2P0+F1/mHfxn+o3wA23Q/mpNAFw8AAAAASUVORK5CYII=" border="0" alt="trendcounter" title="trendcounter Web Analytics"></a>
+
+
+<table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 413px; display: none; top: 229px; position: absolute; left: 199px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><iframe name="oauth2relay745674954" id="oauth2relay745674954" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/saved_resource(8).html"></iframe><div style="background-color: #fff; border: 1px solid #ccc; box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); position: absolute; left: 0px; top: -10000px; transition: visibility 0s linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: #fff; opacity: 0.05;  filter: alpha(opacity=5)"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0; height: 0; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0; height: 0; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge" src="./How to Create Login Page in PHP_MySQL _ Free source code, tutorials and articles_files/bframe.html" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" name="2u84u3za4own" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
