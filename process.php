@@ -1,4 +1,3 @@
-
  <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>ADMIN</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,39 +23,22 @@
    
 <?php
 $info = $alertmessage = $salary = "";
-
 // iclude functions file
 include 'function.php';
-
 // if user is not looged in
-
 //if (!$_SESSION['loggedInUder']) {
 	
 	// send them to the login page
 	//header("Location: index.php");
-
 //}
-
 // get ID sent by the GET collection
-
 	
 $userID = $_GET['id'];
-
 // connect to database
-$server = "localhost";
-$username = "root";
-$password= "";
-$db = "school";
-
-$conn = mysqli_connect($server,$username,$password,$db);
-if(!$conn){
-	echo"ERROR" .mysqli_error($conn);
-}
-
+include 'dbconnection.php';
 // query the database with the staff ID
 $query = "SELECT * FROM agent WHERE id = '$userID'";
 $result = mysqli_query($conn, $query);
-
 // if result is returned
 if( mysqli_num_rows($result)>0)  {
 	
@@ -67,13 +49,11 @@ if( mysqli_num_rows($result)>0)  {
 		
 		$comment= $row['comment'];
 		$userID=$row['id'];
-
 	}
 }else{
 	// no result is returned
 	$alertmessage = "<div class = 'alert alert-warning'>No staff in the database<a href = 'process.php'>Head back</a></div>";
 }
-
 if (isset($_POST['update'])) { // if the update button is clicked
 	
 	// set variables
@@ -88,28 +68,23 @@ if (isset($_POST['update'])) { // if the update button is clicked
 			comment = '$comment'
 			WHERE id = '$userID'";
 			$result = mysqli_query($conn, $query);
-
 			if($result){
 				header("Location:updateusers.php?alert=updatesuccess");
 			}else{
 				echo "Error updating user record:". mysqli_error($conn);
 			}
 }
-
 // delete button was submitted
 if (isset($_POST['delete'])) {
 	$alertmessage = "<div class = 'alert alert-danger'> 
 	
 		<form action = 'process.php?id=$userID' method = 'POST'>
 		<button class= 'close' data-dismiss = 'alert' aria-hidden='true'>&times</button>
-
 		<input type = 'submit' class = 'btn btn-danger btn-sm btn-close' name = 'confirm-delete' value = 'Yes, delete!'>
 		</form><br>
 		<p>Are you sure you want to delete user Information?</p>
-
 	</div>";
 }
-
 // if confirm delete button was submitted
 if ( isset($_POST['confirm-delete'])) {
 	
@@ -122,11 +97,6 @@ if ( isset($_POST['confirm-delete'])) {
 		echo "Error deleting record: ". mysqli_error($conn);
 	}
 }
-
-
-
-
-
 ?>
 <div class="container">
 	<div class="col-sm-8 col-sm-offset-2">
@@ -137,11 +107,13 @@ if ( isset($_POST['confirm-delete'])) {
 	
 	<div class = "form-group col-sm-12">
 		<label for = "comment">Information</label>
-		<input class="form-control input-lg" id="comment" name="comment" rows="15px" cols="15px" 
-		type="text" value="<?php echo $comment; ?>">
-		
-		<!-- <input type = "text" class = "form-control input-lg" id = "comment" name = "comment" value = "<?php echo $comment; ?>">
-		 -->
+		<!-- <input class="form-control input-lg" id="comment" name="comment" rows="15px" cols="15px" 
+		type="text" value="<?php echo $comment; ?>">  -->
+		<textarea class="form-control" name="comment" rows="10" cols="10">
+			<?php echo htmlspecialchars($comment);?>
+			
+
+		</textarea> 
 	</div>
 <hr>
 	

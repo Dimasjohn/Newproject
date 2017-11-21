@@ -1,36 +1,26 @@
 <?php
-$server = "localhost";
-$username = "root";
-$password= "john";
-$db = "schools";
-
-$conn = mysqli_connect($server,$username,$password,$db);
-if(!$conn){
-	echo"ERROR" .mysqli_error($conn);
-}
-
+include 'dbconnection.php';
 $query = "SELECT * FROM agent";
 $result = mysqli_query($conn, $query);
-
 //check for query string
 if ( isset( $_GET['alert'])) {
-	// new staff added
-	if ( $_GET['alert'] == 'success') {
-		$alertmessage = "<div class = 'alert alert-success'><h4>user record Added </h4><a class = 'close' data-dismiss = 'alert'>&times;</a></div>";
-	}elseif( $_GET['alert'] == 'updatesuccess'){
-		$alertmessage = "<div class = 'alert alert-success'><h4>User record updated</h3><a class = 'close' data-dismiss = 'alert'>&times;</a></div>";
-	}elseif( $_GET['alert'] == 'deleted' ){
-		$alertmessage = "<div class = 'alert alert-success'><h4>User Record Deleted Successfull</h4><a class = 'close' data-dismiss = 'alert'>&times;</a></div>";
-	}
+  // new staff added
+  if ( $_GET['alert'] == 'success') {
+    $alertmessage = "<div class = 'alert alert-success'><h4>user record Added </h4><a class = 'close' data-dismiss = 'alert'>&times;</a></div>";
+  }elseif( $_GET['alert'] == 'updatesuccess'){
+    $alertmessage = "<div class = 'alert alert-success'><h4>User record updated</h3><a class = 'close' data-dismiss = 'alert'>&times;</a></div>";
+  }elseif( $_GET['alert'] == 'deleted' ){
+    $alertmessage = "<div class = 'alert alert-success'><h4>User Record Deleted Successfull</h4><a class = 'close' data-dismiss = 'alert'>&times;</a></div>";
+  }
 }
-// close connection 	
+// close connection   
 mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -55,10 +45,7 @@ mysqli_close($conn);
         .jumbotron{
           background-color:white;
           padding:100px;
-
         
-
-
           }
           a{
             size:20px
@@ -68,7 +55,6 @@ mysqli_close($conn);
             size:20px;
             color:white;
             font-size: 30px;
-
           }
           d{
             size:20px;
@@ -106,17 +92,12 @@ mysqli_close($conn);
             color: orange;
             background-color:whitesmoke;
           }
-
           .services{
             width:620px;
             height:auto;
             float:left;
             text-align:left;
           }
-
-
-
-
           
         </style>
 
@@ -138,8 +119,8 @@ mysqli_close($conn);
           <ul class="nav navbar-nav navbar-right">
 <!--             <li><a href="tokya.php">Home</a></li> -->
             <!-- <li><a href="nnconect.php">Services</a></li> -->
-            <!-- <li><a href="#">News Feed</a></li>
-            <li><a href="nnconect.php">Advertisment</a></li> -->
+            <!-- <li><a href="#">News Feed</a></li>-->
+            <li><a href="org.php"><span class="glyphicon glyphicon-book"> Organizations</a></li>
             <li><a href="admin_news.php"><span class="glyphicon glyphicon-edit"> Update News</a></li> 
              <li><a href="register.php"><span class="glyphicon glyphicon-user"> Registration</a></li>
           
@@ -160,50 +141,44 @@ mysqli_close($conn);
   </div>
   </nav>
 <body onload="viewdata()">
-	<div class="container" style="margin-top: 50px">
-		<h4 style="text-align: center;">User information</h4>
-		<table class = "table table-striped table-bordered table-hover">
-		<tr>
-			<th style = "text-align:center">name</th>
-			<th style = "text-align:center">email</th>
-			<th style = "text-align:center">phone</th>
-			<th style = "text-align:center">Category</th>
-			<th style = "text-align:center">Information</th>
-			<th style = "text-align:center">Edit|Delete</th>
-			
-			<!-- <th style = "text-align:center">Type Of Test Conducted</th>
-			<th style = "text-align:center">Result</th>
-			 -->
-		</tr>
-		
-		<?php
-		if (mysqli_num_rows($result)>0) {
-			// their is data
-			//output the data
+  <div class="container" style="margin-top: 50px">
+    <h4 style="text-align: center;">User information</h4>
+    <table class = "table table-striped table-bordered table-hover">
+    <tr>
+      <th style = "text-align:center">name</th>
+      <th style = "text-align:center">email</th>
+      <th style = "text-align:center">phone</th>
+      <th style = "text-align:center">Category</th>
+      <th style = "text-align:center">Information</th>
+      <th style = "text-align:center">Edit|Delete</th>
+      
+      <!-- <th style = "text-align:center">Type Of Test Conducted</th>
+      <th style = "text-align:center">Result</th>
+       -->
+    </tr>
+    
+    <?php
+    if (mysqli_num_rows($result)>0) {
+      // their is data
+      //output the data
+      while( $row = mysqli_fetch_assoc($result)){
+        echo "<tr>";
+        echo "<td style = 'text-align:center'>".$row['name']."</td><td style = 'text-align:center'>".$row['email']."</td><td style = 'text-align:center'>".$row['phone']."</td><td style = 'text-align:center'>".$row['category']."</td><td style = 'text-align:center'>".$row['comment']."</td>";
+        
+        echo '<td style = "text-align:center"><a href = "process.php?id='.$row['id'].'" type = "button" class = "btn btn-primary btn md"><span class = "glyphicon glyphicon-edit"></span></a></td>';
+        
+        echo "</tr>";
+      }
+    }else{
+      // if no entries
+      echo "<div class = 'alert alert-warning'>You Have No records </div>";
+    }
+    ?>
 
-			while( $row = mysqli_fetch_assoc($result)){
-				echo "<tr>";
-
-				echo "<td style = 'text-align:center'>".$row['name']."</td><td style = 'text-align:center'>".$row['email']."</td><td style = 'text-align:center'>".$row['phone']."</td><td style = 'text-align:center'>".$row['category']."</td><td style = 'text-align:center'>".$row['comment']."</td>";
-				
-				echo '<td style = "text-align:center"><a href = "process.php?id='.$row['id'].'" type = "button" class = "btn btn-primary btn md"><span class = "glyphicon glyphicon-edit"></span></a></td>';
-
-				
-				echo "</tr>";
-			}
-		}else{
-			// if no entries
-			echo "<div class = 'alert alert-warning'>You Have No records </div>";
-
-
-		}
-
-		?>
-
-		<!-- <tr>
-			<td colspan = "6"><div class = "text-center"><a href="add.php" type = "button" class = "btn btn-sm btn-primary"><span class = "glyphicon glyphicon-plus"></span>Add Staff</a></div></td>
-		</tr> -->
-	</table>
+    <!-- <tr>
+      <td colspan = "6"><div class = "text-center"><a href="add.php" type = "button" class = "btn btn-sm btn-primary"><span class = "glyphicon glyphicon-plus"></span>Add Staff</a></div></td>
+    </tr> -->
+  </table>
 
 <!-- jQuery -->
     <script src="../vendor/bootstrap/jquery.min.js"></script>
@@ -252,28 +227,23 @@ $(document).ready(function(){
 </script>
 <!-- <script type="text/javascript">
 function viewdata(){
-	$.ajak({
-		url: 'process.php?figo=view',
-		method: 'GET'
-	}).done(function(data){
-		$('tbody').php(data)
-		tableData()
-	})
-
+  $.ajak({
+    url: 'process.php?figo=view',
+    method: 'GET'
+  }).done(function(data){
+    $('tbody').php(data)
+    tableData()
+  })
 }
 function tableData(){
-	$('#contact').TableData({
-		url: 'process.php',
-		columns: {
-			identifier: [0, 'id'],
-			editable: [[1, 'name'], [2, 'email'], [3, 'phone'], [4, 'address'], [5, 'info']]
-		}
-	});
-
-	}
-
+  $('#contact').TableData({
+    url: 'process.php',
+    columns: {
+      identifier: [0, 'id'],
+      editable: [[1, 'name'], [2, 'email'], [3, 'phone'], [4, 'address'], [5, 'info']]
+    }
+  });
+  }
 </script> -->
 </body>
-
 </html>
-
